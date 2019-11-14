@@ -63,9 +63,11 @@ public class Shopping {
 		Actions a = new Actions(driver); 
 		a.moveToElement(driver.findElement(By.xpath("//a[.='Women']"))).perform();
 		Thread.sleep(5000L); 
-		a.moveToElement(driver.findElement(By.xpath("//a[@title='Summer Dresses']"))).click().build().perform();
+		a.moveToElement(driver.findElement(By.xpath("//a[.='Summer Dresses']"))).click().build().perform();
 		//driver.findElement(By.xpath("//li[@class='sfHoverForce sfHover']//a[.='Summer Dresses']")).click();
 		
+		// 6. The Items would be in 'Grid view'. Change it to 'List View'.
+
 		
 		
 		
