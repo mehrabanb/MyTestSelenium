@@ -1,11 +1,12 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class Shopping {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 		System.setProperty("webdriver.chrome.driver" , "C:\\Users\\bob\\OneDrive\\Selenium\\chromedriver_win32\\chromedriver.exe"); //selenium 
@@ -57,6 +58,13 @@ public class Shopping {
 		
 		//4. Click 'Save'
 		driver.findElement(By.xpath("//span[contains(.,'Save')]")).click();
+		
+		//5. Navigate to 'Women' --> Summer dresses
+		Actions a = new Actions(driver); 
+		a.moveToElement(driver.findElement(By.xpath("//a[.='Women']"))).perform();
+		Thread.sleep(5000L); 
+		a.moveToElement(driver.findElement(By.xpath("//a[@title='Summer Dresses']"))).click().build().perform();
+		//driver.findElement(By.xpath("//li[@class='sfHoverForce sfHover']//a[.='Summer Dresses']")).click();
 		
 		
 		
