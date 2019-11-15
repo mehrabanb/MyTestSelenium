@@ -158,9 +158,9 @@ public class ShoppingAddressRegister {
 		driver.findElement(By.xpath("//span[.='Order history and details']")).click();
 		
 		//15. Capture a screenshot of the order history
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,500)");    
-        Thread.sleep(3000L); 
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,500)");    
+		Thread.sleep(3000L); 
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
 		FileUtils.copyFile(src,new File("C://users//Bob//Pictures//Screenshot.png"));
 		
