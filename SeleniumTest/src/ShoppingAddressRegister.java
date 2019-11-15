@@ -15,7 +15,10 @@ import org.apache.commons.io.FileUtils;
 public class ShoppingAddressRegister {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
-		// TODO Auto-generated method stub
+		/*
+		 * Question:Target Application URL : http://automationpractice.com/index.php
+		 * Pre- requiste : Sign up into the application
+		 */
 		
 		System.setProperty("webdriver.chrome.driver" , "C:\\Users\\bob\\OneDrive\\Selenium\\chromedriver_win32\\chromedriver.exe"); //selenium 
 		WebDriver driver=new ChromeDriver(); 
